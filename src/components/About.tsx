@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 
+
 export default function About() {
   return (
     <section className="py-24 bg-white border-y border-charcoal/5">
@@ -15,7 +16,7 @@ export default function About() {
           >
             <div className="relative aspect-[4/5] w-full max-w-md mx-auto md:mx-0 overflow-hidden rounded-3xl bg-bg border border-charcoal/10">
               <img 
-                src="images/profile.jpeg" 
+                src="/src/assets/profile.jpeg"
                 alt="Junayed Ahmed" 
                 className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
               />

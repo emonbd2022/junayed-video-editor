@@ -35,13 +35,13 @@ export default function Portfolio() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-8 py-3 rounded-full flex items-center gap-2 transition-all duration-300 font-bold ${
+              className={`px-8 py-3 rounded-full flex items-center gap-2 transition-all duration-300 font-black tracking-tight ${
                 activeCategory === category 
-                  ? 'bg-charcoal text-bg scale-105' 
+                  ? 'bg-accent text-white scale-105 shadow-lg shadow-accent/20' 
                   : 'bg-white text-charcoal/40 hover:text-charcoal border border-charcoal/5'
               }`}
             >
-              {category === 'YouTube' && <Play size={18} />}
+              {category === 'YouTube' && <Play size={18} className="fill-current" />}
               {category === 'Shorts' && <Scissors size={18} />}
               {category === 'Before-After' && <Layers size={18} />}
               {category}
@@ -74,7 +74,7 @@ export default function Portfolio() {
                   <img 
                     src={work.image} 
                     alt={work.title} 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-charcoal/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center p-6 text-center">
                     <span className="text-bg font-bold text-lg">{work.title}</span>

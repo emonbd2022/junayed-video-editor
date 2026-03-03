@@ -18,7 +18,7 @@ export default function Navbar() {
               href="https://www.instagram.com/juna_yed13/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-2 bg-charcoal text-bg rounded-full text-sm font-medium hover:bg-accent hover:text-charcoal transition-all duration-300"
+              className="inline-flex items-center gap-2 px-6 py-2 bg-accent text-white rounded-full text-sm font-bold hover:scale-105 transition-all duration-300 shadow-lg shadow-accent/10"
             >
               <Instagram size={18} />
               Contact Me

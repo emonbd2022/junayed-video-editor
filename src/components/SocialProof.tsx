@@ -20,7 +20,7 @@ export default function SocialProof() {
           <div className="flex -space-x-4">
             {clients.map((src, index) => (
               <div key={index} className="w-16 h-16 rounded-full border-4 border-bg overflow-hidden ring-1 ring-charcoal/10">
-                <img src={src} alt={`Client ${index + 1}`} className="w-full h-full object-cover grayscale" />
+                <img src={src} alt={`Client ${index + 1}`} className="w-full h-full object-cover" />
               </div>
             ))}
           </div>

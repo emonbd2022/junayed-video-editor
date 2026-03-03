@@ -29,29 +29,41 @@ export default function WhyChooseMe() {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
+          <motion.span 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-accent font-bold uppercase tracking-widest text-sm mb-4 block"
+          >
+            Why Me?
+          </motion.span>
           <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-6">Why Choose Me?</h2>
           <p className="text-charcoal/50 max-w-2xl mx-auto text-lg font-medium">
             I don't just cut video; I craft narratives that build brands.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {reasons.map((reason, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-bg p-8 rounded-3xl border border-charcoal/5 hover:border-accent/20 transition-all duration-300"
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              className="bg-[#FFF9F2] rounded-[2rem] border border-[#FF94001A] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
             >
-              <div className="mb-6 bg-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm border border-charcoal/5">
-                {reason.icon}
+              <div className="testimonial-card-gradient p-8 pb-4">
+                <div className="mb-6 bg-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm border border-[#FF94001A]">
+                  {reason.icon}
+                </div>
+                <h3 className="text-xl font-bold text-charcoal mb-4">{reason.title}</h3>
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">{reason.title}</h3>
-              <p className="text-charcoal/60 text-sm leading-relaxed font-medium">
-                {reason.description}
-              </p>
+              <div className="px-8 pb-10">
+                <p className="text-charcoal/70 text-sm leading-relaxed font-medium">
+                  {reason.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

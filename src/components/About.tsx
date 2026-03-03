@@ -17,7 +17,7 @@ export default function About() {
               <img 
                 src="https://picsum.photos/seed/junayed/800/1000" 
                 alt="Junayed Ahmed" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
               />
             </div>
           </motion.div>

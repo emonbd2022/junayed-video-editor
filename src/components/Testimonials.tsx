@@ -23,15 +23,15 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-zinc-950">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Clients speak through the <span className="text-purple-400">results</span> I deliver
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-4">
+            Clients speak through the <span className="text-accent">results</span> I deliver
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -39,20 +39,20 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-zinc-900 p-8 rounded-2xl border border-white/5 hover:border-purple-500/30 transition-colors"
+              className="bg-bg p-10 rounded-3xl border border-charcoal/5 hover:border-accent/30 transition-all duration-300"
             >
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex items-center gap-4 mb-8">
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.name} 
-                  className="w-12 h-12 rounded-full object-cover"
+                  className="w-14 h-14 rounded-full object-cover grayscale"
                 />
                 <div>
-                  <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                  <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                  <h4 className="text-charcoal font-bold">{testimonial.name}</h4>
+                  <p className="text-charcoal/40 text-sm font-medium uppercase tracking-wider">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="text-gray-300 leading-relaxed">"{testimonial.text}"</p>
+              <p className="text-charcoal/70 leading-relaxed italic">"{testimonial.text}"</p>
             </motion.div>
           ))}
         </div>

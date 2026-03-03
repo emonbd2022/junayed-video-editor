@@ -11,9 +11,10 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="bg-black min-h-screen text-white font-sans selection:bg-purple-500/30">
+    <div className="bg-bg min-h-screen text-charcoal font-sans selection:bg-accent/30">
+      <div className="fixed inset-0 minimal-grid pointer-events-none" />
       <Navbar />
-      <main>
+      <main className="relative">
         <Hero />
         <About />
         <SocialProof />

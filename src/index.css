@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@theme {
+  --color-bg: #FAFAFA;
+  --color-charcoal: #2E2E2E;
+  --color-accent: #EAA849;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-charcoal antialiased;
+  }
+}
+
+.minimal-grid {
+  background-image: linear-gradient(to right, #2E2E2E 1px, transparent 1px),
+    linear-gradient(to bottom, #2E2E2E 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.03;
+}

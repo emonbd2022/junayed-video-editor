@@ -25,20 +25,20 @@ export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState<Category>('YouTube');
 
   return (
-    <section className="py-24 bg-black">
+    <section className="py-24 bg-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-white text-center mb-12">Selected Works</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-charcoal text-center mb-16">Selected Works</h2>
 
         {/* Category Buttons */}
-        <div className="flex justify-center gap-4 mb-12 flex-wrap">
+        <div className="flex justify-center gap-6 mb-16 flex-wrap">
           {(['YouTube', 'Shorts', 'Before-After'] as Category[]).map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-3 rounded-full flex items-center gap-2 transition-all ${
+              className={`px-8 py-3 rounded-full flex items-center gap-2 transition-all duration-300 font-bold ${
                 activeCategory === category 
-                  ? 'bg-white text-black font-bold' 
-                  : 'bg-zinc-900 text-gray-400 hover:bg-zinc-800'
+                  ? 'bg-charcoal text-bg scale-105' 
+                  : 'bg-white text-charcoal/40 hover:text-charcoal border border-charcoal/5'
               }`}
             >
               {category === 'YouTube' && <Play size={18} />}
@@ -50,15 +50,15 @@ export default function Portfolio() {
         </div>
 
         {/* Content Grid */}
-        <div className="min-h-[400px]">
+        <div className="min-h-[500px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeCategory}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className={`grid gap-6 ${
+              transition={{ duration: 0.4 }}
+              className={`grid gap-10 ${
                 activeCategory === 'Shorts' 
                   ? 'grid-cols-2 md:grid-cols-4' 
                   : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
@@ -67,17 +67,17 @@ export default function Portfolio() {
               {works[activeCategory].map((work) => (
                 <div 
                   key={work.id} 
-                  className={`group relative overflow-hidden rounded-xl bg-zinc-900 ${
+                  className={`group relative overflow-hidden rounded-3xl bg-white border border-charcoal/5 ${
                     activeCategory === 'Shorts' ? 'aspect-[9/16]' : 'aspect-video'
                   }`}
                 >
                   <img 
                     src={work.image} 
                     alt={work.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="text-white font-medium">{work.title}</span>
+                  <div className="absolute inset-0 bg-charcoal/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center p-6 text-center">
+                    <span className="text-bg font-bold text-lg">{work.title}</span>
                   </div>
                 </div>
               ))}

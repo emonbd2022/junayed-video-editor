@@ -15,7 +15,7 @@ export default function About() {
           >
             <div className="relative aspect-[4/5] w-full max-w-md mx-auto md:mx-0 overflow-hidden rounded-3xl bg-bg border border-charcoal/10">
               <img 
-                src="https://picsum.photos/seed/junayed/800/1000" 
+                src="images/profile.jpeg" 
                 alt="Junayed Ahmed" 
                 className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
               />

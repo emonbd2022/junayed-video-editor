@@ -45,7 +45,7 @@ export default function Navbar() {
         >
           <div className="px-4 pt-2 pb-4 space-y-1">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/juna_yed13/"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full text-center px-4 py-3 bg-charcoal text-bg rounded-lg font-medium"

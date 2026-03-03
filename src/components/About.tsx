@@ -16,7 +16,7 @@ export default function About() {
           >
             <div className="relative aspect-[4/5] w-full max-w-md mx-auto md:mx-0 overflow-hidden rounded-3xl bg-bg border border-charcoal/10">
               <img 
-                src="/src/assets/profile.jpeg"
+                src="https://res.cloudinary.com/ddmp5ahkc/image/upload/v1772572876/profile_hlajcf.jpg"
                 alt="Junayed Ahmed" 
                 className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
               />

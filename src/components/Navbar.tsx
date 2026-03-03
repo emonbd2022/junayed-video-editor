@@ -15,7 +15,7 @@ export default function Navbar() {
           
           <div className="hidden md:block">
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/juna_yed13/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-2 bg-charcoal text-bg rounded-full text-sm font-medium hover:bg-accent hover:text-charcoal transition-all duration-300"

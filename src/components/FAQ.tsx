@@ -4,20 +4,28 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
   {
-    question: "What is your typical turnaround time?",
-    answer: "For most YouTube videos (8-12 mins), I deliver the first draft within 48 hours. Shorts and Reels are typically delivered within 24 hours."
+    question: "How does your workflow work?",
+    answer: "You record the video and send me the files (Google Drive or any platform you prefer). I study your brand and audience, edit with strategy in mind, and deliver the final version. You don’t have to stress about the technical side — just focus on recording. I handle the rest."
   },
   {
-    question: "Do you provide thumbnail design?",
-    answer: "Yes! I can include high-CTR thumbnail designs as part of a monthly package or as an add-on service."
+    question: "Do you provide any additional YouTube support?",
+    answer: "Yes. Along with editing, I can help with: CTR-focused thumbnail design, Title suggestions, Basic SEO, Uploading and publishing (if you’re busy), and Content structure guidance if needed. I support growth — not just editing."
+  },
+  {
+    question: "What is your typical turnaround time?",
+    answer: "Most videos are delivered within 48–72 hours, depending on the project."
   },
   {
     question: "How do we transfer large video files?",
-    answer: "I use Google Drive or Frame.io for seamless file transfer and review. Frame.io allows you to leave time-stamped comments directly on the video."
+    answer: "I use Google Drive or Frame.io for smooth file sharing and review. With Frame.io, you can leave comments directly on specific moments in the video."
   },
   {
     question: "Do you offer revisions?",
-    answer: "Absolutely. I offer unlimited revisions until you are 100% satisfied with the final product. My goal is to match your vision perfectly."
+    answer: "Yes. I offer up to 2 revisions per video. This keeps the process clear and efficient. Most clients are fully satisfied within the first or second round."
+  },
+  {
+    question: "Do you provide podcast video editing support?",
+    answer: "Yes, I do. I edit long-form podcast episodes for YouTube and also create short clips for social media if needed. From clean cuts to audience-focused structure — I make sure your podcast content is engaging and optimized for growth."
   }
 ];
 
@@ -36,7 +44,7 @@ export default function FAQ() {
           >
             Support
           </motion.span>
-          <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-4">Questions You May Ask</h2>
         </div>
         
         <div className="space-y-6">

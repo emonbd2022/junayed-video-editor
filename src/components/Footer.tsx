@@ -1,4 +1,4 @@
-import { Instagram, Youtube, Twitter, Mail } from 'lucide-react';
+import { Instagram, Youtube, MessageCircle, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -12,16 +12,16 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-8">
-            <a href="#" className="text-charcoal/40 hover:text-accent transition-all duration-300">
+            <a href="https://www.instagram.com/juna_yed13/" className="text-charcoal/40 hover:text-accent transition-all duration-300">
               <Instagram size={24} />
             </a>
-            <a href="#" className="text-charcoal/40 hover:text-accent transition-all duration-300">
+            <a href="https://youtube.com/@juna_yed13?si=Mep17wPZrQlg7QHh" className="text-charcoal/40 hover:text-accent transition-all duration-300">
               <Youtube size={24} />
             </a>
-            <a href="#" className="text-charcoal/40 hover:text-accent transition-all duration-300">
-              <Twitter size={24} />
+            <a href="https://wa.me/8801306253443" target="_blank" rel="noopener noreferrer" className="text-charcoal/40 hover:text-accent transition-all duration-300">
+              <MessageCircle size={24} />
             </a>
-            <a href="mailto:hello@junayed.com" className="text-charcoal/40 hover:text-accent transition-all duration-300">
+            <a href="mailto:ahmedju430@gmail.com" className="text-charcoal/40 hover:text-accent transition-all duration-300">
               <Mail size={24} />
             </a>
           </div>

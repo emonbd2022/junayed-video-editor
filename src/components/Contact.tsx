@@ -6,14 +6,17 @@ export default function Contact() {
     <section className="py-24 bg-bg relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <motion.button
+          <motion.a
+            href="https://calendly.com/ahmedju430/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="group relative inline-flex items-center gap-3 px-10 py-5 bg-accent text-white rounded-full text-xl font-black hover:shadow-2xl hover:shadow-accent/30 transition-all duration-300 mb-16"
           >
             <Calendar className="w-6 h-6" />
             Book a Discovery Call
-          </motion.button>
+          </motion.a>
 
           <h2 className="text-4xl font-black text-charcoal mb-8 tracking-tight">Or send me a message</h2>
         </div>

@@ -1,24 +1,38 @@
 import { motion } from 'motion/react';
-import { MessageCircle } from 'lucide-react';
+import { Mic, Palette, Target, Youtube } from 'lucide-react';
 
 const testimonials = [
   {
-    name: "Pradeep",
-    role: "Video Editor",
-    image: "https://picsum.photos/seed/pradeep/200/200",
-    text: "I enrolled in the EditingSkool Masterclass a few weeks ago, and I can say that it was one of the best decisions in my video editing learning journey. I have tried some other courses available on the internet but all of them just explain the use and features of tools and software."
+    name: "Brandon",
+    role: "Owner, Soundspired Media (Video-First Podcast Agency)",
+    image: "https://picsum.photos/seed/brandon/200/200",
+    icon: <Mic size={18} className="text-white fill-current" />,
+    iconBg: "bg-[#FF4B4B]",
+    text: "“We create content people actually keep watching. Junayed’s editing helped us make videos that connect with the right audience. The quality and understanding of storytelling is excellent.”"
   },
   {
-    name: "Sarah Johnson",
-    role: "Content Creator",
-    image: "https://picsum.photos/seed/sarah/200/200",
-    text: "Junayed transformed my raw footage into engaging content that actually converts. My leads doubled in just two months. His understanding of storytelling is unmatched in the industry."
+    name: "Alannah",
+    role: "Branding & Creative Direction, AlfiCreative",
+    image: "https://picsum.photos/seed/alannah/200/200",
+    icon: <Palette size={18} className="text-white fill-current" />,
+    iconBg: "bg-[#7C3AED]",
+    text: "“Junayed helped transform our raw footage into content that supports our clients’ brands. His work is clean, strategic, and focused on real business results. Highly recommended.”"
   },
   {
-    name: "Mark Davis",
-    role: "Agency Owner",
-    image: "https://picsum.photos/seed/mark/200/200",
-    text: "Professional, fast, and creative. He knows exactly what works on YouTube right now. We've seen a 40% increase in average view duration since he took over our editing."
+    name: "Chanelle Le Roux",
+    role: "Marketing Coach",
+    image: "https://picsum.photos/seed/chanelle/200/200",
+    icon: <Target size={18} className="text-white fill-current" />,
+    iconBg: "bg-[#3B82F6]",
+    text: "“Great communication, fast delivery, and high-quality editing. The videos helped support our content marketing goals. I’m very satisfied with the result.”"
+  },
+  {
+    name: "Victoria",
+    role: "YouTube Producer",
+    image: "https://picsum.photos/seed/victoria/200/200",
+    icon: <Youtube size={18} className="text-white fill-current" />,
+    iconBg: "bg-[#FF0000]",
+    text: "“Working with Junayed makes content production easier. He understands brand context and client audience, so I don’t need to worry about the editing process.”"
   }
 ];
 
@@ -40,7 +54,7 @@ export default function Testimonials() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -48,7 +62,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="bg-[#FFF9F2] rounded-[2rem] border border-[#FF94001A] overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              className="bg-[#FFF9F2] rounded-[2rem] border border-[#FF94001A] overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full"
             >
               {/* Card Header with Gradient */}
               <div className="testimonial-card-gradient p-8 pb-4">
@@ -63,18 +77,18 @@ export default function Testimonials() {
                     </div>
                     <div>
                       <h4 className="text-charcoal text-xl font-bold leading-tight">{testimonial.name}</h4>
-                      <p className="text-charcoal/60 text-sm font-medium">{testimonial.role}</p>
                     </div>
                   </div>
-                  <div className="bg-[#25D366] p-1.5 rounded-full">
-                    <MessageCircle size={18} className="text-white fill-current" />
+                  <div className={`${testimonial.iconBg} p-1.5 rounded-full`}>
+                    {testimonial.icon}
                   </div>
                 </div>
+                <p className="text-charcoal/60 text-sm font-medium mb-4">{testimonial.role}</p>
               </div>
               
               {/* Card Body */}
-              <div className="px-8 pb-10">
-                <p className="text-charcoal/80 leading-relaxed text-[1.05rem] font-medium">
+              <div className="px-8 pb-10 flex-grow">
+                <p className="text-charcoal/80 leading-relaxed text-[1.05rem] font-medium italic">
                   {testimonial.text}
                 </p>
               </div>

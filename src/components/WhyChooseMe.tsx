@@ -1,26 +1,26 @@
 import { motion } from 'motion/react';
-import { CheckCircle2, Clock, TrendingUp, Zap } from 'lucide-react';
+import { TrendingUp, Zap, Youtube, Layers } from 'lucide-react';
 
 const reasons = [
   {
-    icon: <Clock className="w-8 h-8 text-purple-400" />,
-    title: "Fast Turnaround",
-    description: "I deliver high-quality edits within 24-48 hours, ensuring you stay consistent with your posting schedule."
+    icon: <TrendingUp className="w-8 h-8 text-accent" />,
+    title: "Fast, Reliable & Retention-Focused",
+    description: "I deliver clean, high-quality edits on time. Every video is structured to keep viewers watching and stay consistent with your posting schedule. From smooth visuals to clear sound — everything is handled professionally so you don’t have to worry."
   },
   {
-    icon: <TrendingUp className="w-8 h-8 text-blue-400" />,
-    title: "Retention Focused",
-    description: "My edits are designed to keep viewers watching. Higher retention means more algorithmic push and more views."
-  },
-  {
-    icon: <Zap className="w-8 h-8 text-yellow-400" />,
-    title: "Engaging Visuals",
-    description: "I use custom motion graphics and sound design to make your content stand out in a crowded feed."
-  },
-  {
-    icon: <CheckCircle2 className="w-8 h-8 text-green-400" />,
+    icon: <Zap className="w-8 h-8 text-accent" />,
     title: "Hassle-Free Process",
-    description: "From raw footage to final polish, I handle everything. You focus on filming, I handle the rest."
+    description: "You record. I handle the rest. From raw footage to final delivery, I manage the editing and polish so you can focus on your business."
+  },
+  {
+    icon: <Youtube className="w-8 h-8 text-accent" />,
+    title: "Not Just an Editor — I Understand YouTube",
+    description: "Most editors just cut videos. I study your brand and audience before I edit. I understand how YouTube works — hooks, retention, titles, and structure. I edit with growth in mind, not just visuals."
+  },
+  {
+    icon: <Layers className="w-8 h-8 text-accent" />,
+    title: "Specialized in YouTube Content",
+    description: "I focus on YouTube video content and continuously improve by learning and working alongside experienced YouTube producers. This helps me stay updated and bring better structure and strategy to every project."
   }
 ];
 

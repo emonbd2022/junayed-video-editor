@@ -36,7 +36,7 @@ export default function Portfolio() {
   const [selectedVideo, setSelectedVideo] = useState<{ url: string; category: Category } | null>(null);
 
   return (
-    <section className="py-24 bg-bg">
+    <section id="work" className="py-24 bg-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-charcoal text-center mb-16">Selected Works</h2>
 

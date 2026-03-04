@@ -50,12 +50,20 @@ export default function Hero() {
             transition={{ delay: 0.8 }}
             className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <button className="px-8 py-4 bg-accent text-white rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-accent/20">
+            <button 
+              onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
+              className="px-8 py-4 bg-accent text-white rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-accent/20"
+            >
               View My Work
             </button>
-            <button className="px-8 py-4 bg-charcoal text-bg rounded-full font-bold text-lg hover:bg-charcoal/90 transition-colors">
+            <a 
+              href="https://calendly.com/ahmedju430/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-charcoal text-bg rounded-full font-bold text-lg hover:bg-charcoal/90 transition-colors"
+            >
               Book a Call
-            </button>
+            </a>
           </motion.div>
         </motion.div>
       </div>

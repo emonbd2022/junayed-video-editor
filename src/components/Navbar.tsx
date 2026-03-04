@@ -1,9 +1,30 @@
 import { motion } from 'motion/react';
-import { Menu, X, Instagram } from 'lucide-react';
+import { Menu, X, Instagram, MessageCircle, Mail } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const socialLinks = [
+    { 
+      icon: <Instagram size={18} />, 
+      href: "https://www.instagram.com/juna_yed13/", 
+      label: "Instagram",
+      color: "bg-accent"
+    },
+    { 
+      icon: <MessageCircle size={18} />, 
+      href: "https://wa.me/8801306253443", 
+      label: "WhatsApp",
+      color: "bg-emerald-500"
+    },
+    { 
+      icon: <Mail size={18} />, 
+      href: "mailto:ahmedju430@gmail.com", 
+      label: "Email",
+      color: "bg-charcoal"
+    }
+  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-md border-b border-charcoal/10">
@@ -13,16 +34,22 @@ export default function Navbar() {
             <span className="text-charcoal text-xl font-bold tracking-tight">Junayed Ahmed</span>
           </div>
           
-          <div className="hidden md:block">
-            <a 
-              href="https://www.instagram.com/juna_yed13/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-2 bg-accent text-white rounded-full text-sm font-bold hover:scale-105 transition-all duration-300 shadow-lg shadow-accent/10"
-            >
-              <Instagram size={18} />
-              Contact Me
-            </a>
+          <div className="hidden md:flex items-center gap-3">
+            {socialLinks.map((link, index) => (
+              <motion.a 
+                key={index}
+                href={link.href} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`inline-flex items-center gap-2 px-4 py-2 ${link.color} text-white rounded-full text-xs font-bold transition-all duration-300 shadow-lg shadow-charcoal/5`}
+                title={link.label}
+              >
+                {link.icon}
+                <span className={index === 0 ? "block" : "hidden lg:block"}>{link.label}</span>
+              </motion.a>
+            ))}
           </div>
 
           <div className="md:hidden">
@@ -43,15 +70,20 @@ export default function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden bg-bg border-b border-charcoal/10"
         >
-          <div className="px-4 pt-2 pb-4 space-y-1">
-            <a
-              href="https://www.instagram.com/juna_yed13/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full text-center px-4 py-3 bg-charcoal text-bg rounded-lg font-medium"
-            >
-              Contact Me on Instagram
-            </a>
+          <div className="px-4 pt-2 pb-6 space-y-3">
+            <p className="text-[10px] font-black text-charcoal/30 uppercase tracking-[0.2em] px-2">Contact Me</p>
+            {socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center justify-center gap-3 w-full px-4 py-4 ${link.color} text-white rounded-2xl font-bold text-sm`}
+              >
+                {link.icon}
+                Contact on {link.label}
+              </a>
+            ))}
           </div>
         </motion.div>
       )}

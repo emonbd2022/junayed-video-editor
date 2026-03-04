@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Youtube, Clapperboard, Video } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -7,32 +8,22 @@ export default function Hero() {
       <div className="absolute top-1/4 left-10 w-24 h-24 border-2 border-accent/10 rounded-full animate-pulse" />
       <div className="absolute bottom-1/4 right-10 w-32 h-32 border-2 border-accent/10 rounded-full animate-bounce duration-3000" />
       
-      {/* Software Logos Sauce */}
+      {/* Creative Icons Sauce */}
       <motion.div 
         initial={{ opacity: 0, x: -50, rotate: -20 }}
         animate={{ opacity: 0.1, x: 0, rotate: -12 }}
         transition={{ delay: 1.2, duration: 1 }}
-        className="absolute top-1/3 left-[10%] hidden lg:block pointer-events-none select-none"
+        className="absolute top-1/3 left-[10%] hidden lg:block pointer-events-none select-none text-accent"
       >
-        <img 
-          src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg" 
-          alt="Premiere Pro" 
-          className="w-24 h-24 grayscale"
-          referrerPolicy="no-referrer"
-        />
+        <Youtube size={120} strokeWidth={1.5} />
       </motion.div>
       <motion.div 
         initial={{ opacity: 0, x: 50, rotate: 20 }}
         animate={{ opacity: 0.1, x: 0, rotate: 12 }}
         transition={{ delay: 1.4, duration: 1 }}
-        className="absolute bottom-1/3 right-[10%] hidden lg:block pointer-events-none select-none"
+        className="absolute bottom-1/3 right-[10%] hidden lg:block pointer-events-none select-none text-charcoal"
       >
-        <img 
-          src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" 
-          alt="After Effects" 
-          className="w-24 h-24 grayscale"
-          referrerPolicy="no-referrer"
-        />
+        <Clapperboard size={120} strokeWidth={1.5} />
       </motion.div>
       
       <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
@@ -101,10 +92,11 @@ export default function Hero() {
             transition={{ delay: 1.2 }}
             className="mt-12 flex items-center justify-center gap-6 grayscale opacity-30 hover:opacity-100 hover:grayscale-0 transition-all duration-500"
           >
-            <span className="text-xs font-black uppercase tracking-[0.2em] text-charcoal/40">Mastering the craft with</span>
-            <div className="flex gap-4">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg" alt="Pr" className="w-6 h-6" referrerPolicy="no-referrer" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" alt="Ae" className="w-6 h-6" referrerPolicy="no-referrer" />
+            <span className="text-xs font-black uppercase tracking-[0.2em] text-charcoal/40">Creating content for</span>
+            <div className="flex gap-4 text-charcoal">
+              <Youtube size={24} />
+              <Video size={24} />
+              <Clapperboard size={24} />
             </div>
           </motion.div>
         </motion.div>

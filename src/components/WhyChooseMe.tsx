@@ -2,6 +2,16 @@ import { motion } from 'motion/react';
 import { TrendingUp, Zap, Youtube, Layers } from 'lucide-react';
 
 const reasons = [
+    {
+    icon: <Youtube className="w-8 h-8 text-accent" />,
+    title: "Not Just an Editor — I Understand YouTube",
+    description: "Most editors just cut videos. I study your brand and audience before I edit. I understand how YouTube works — hooks, retention, titles, and structure. I edit with growth in mind, not just visuals."
+  },
+  {
+    icon: <Layers className="w-8 h-8 text-accent" />,
+    title: "Specialized in YouTube Content",
+    description: "I focus on YouTube video content and continuously improve by learning and working alongside experienced YouTube producers. This helps me stay updated and bring better structure and strategy to every project."
+  },
   {
     icon: <TrendingUp className="w-8 h-8 text-accent" />,
     title: "Fast, Reliable & Retention-Focused",
@@ -11,16 +21,6 @@ const reasons = [
     icon: <Zap className="w-8 h-8 text-accent" />,
     title: "Hassle-Free Process",
     description: "You record. I handle the rest. From raw footage to final delivery, I manage the editing and polish so you can focus on your business."
-  },
-  {
-    icon: <Youtube className="w-8 h-8 text-accent" />,
-    title: "Not Just an Editor — I Understand YouTube",
-    description: "Most editors just cut videos. I study your brand and audience before I edit. I understand how YouTube works — hooks, retention, titles, and structure. I edit with growth in mind, not just visuals."
-  },
-  {
-    icon: <Layers className="w-8 h-8 text-accent" />,
-    title: "Specialized in YouTube Content",
-    description: "I focus on YouTube video content and continuously improve by learning and working alongside experienced YouTube producers. This helps me stay updated and bring better structure and strategy to every project."
   }
 ];
 

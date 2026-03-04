@@ -39,8 +39,8 @@ export default function Navbar() {
               <motion.a 
                 key={index}
                 href={link.href} 
-                target="_blank" 
-                rel="noopener noreferrer"
+                target={link.href.startsWith('mailto:') ? undefined : "_blank"} 
+                rel={link.href.startsWith('mailto:') ? undefined : "noopener noreferrer"}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`inline-flex items-center gap-2 px-4 py-2 ${link.color} text-white rounded-full text-xs font-bold transition-all duration-300 shadow-lg shadow-charcoal/5`}
@@ -76,8 +76,8 @@ export default function Navbar() {
               <a
                 key={index}
                 href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={link.href.startsWith('mailto:') ? undefined : "_blank"}
+                rel={link.href.startsWith('mailto:') ? undefined : "noopener noreferrer"}
                 className={`flex items-center justify-center gap-3 w-full px-4 py-4 ${link.color} text-white rounded-2xl font-bold text-sm`}
               >
                 {link.icon}

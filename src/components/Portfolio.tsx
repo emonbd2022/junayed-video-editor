@@ -43,8 +43,38 @@ export default function Portfolio() {
   const [selectedVideo, setSelectedVideo] = useState<{ url: string; category: Category } | null>(null);
 
   return (
-    <section id="work" className="py-24 bg-bg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="work" className="relative py-24 bg-bg overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute top-40 -left-20 w-64 h-64 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-40 -right-20 w-96 h-96 bg-charcoal/5 rounded-full blur-3xl pointer-events-none" />
+      
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+        whileInView={{ opacity: 0.05, scale: 1, rotate: -15 }}
+        className="absolute top-20 right-[5%] hidden lg:block pointer-events-none select-none blur-[2px]"
+      >
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg" 
+          alt="" 
+          className="w-40 h-40"
+          referrerPolicy="no-referrer"
+        />
+      </motion.div>
+
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
+        whileInView={{ opacity: 0.05, scale: 1, rotate: 15 }}
+        className="absolute bottom-20 left-[5%] hidden lg:block pointer-events-none select-none blur-[2px]"
+      >
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" 
+          alt="" 
+          className="w-48 h-48"
+          referrerPolicy="no-referrer"
+        />
+      </motion.div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-charcoal text-center mb-16">My Works</h2>
 
         {/* Category Buttons */}

@@ -6,31 +6,38 @@ type Category = 'YouTube' | 'Shorts' | 'Before-After';
 
 interface WorkItem {
   id: number;
-  title: string;
+  title?: string;
   image: string;
   videoUrl: string;
 }
 
 const works: Record<Category, WorkItem[]> = {
   YouTube: [
-    { id: 1, title: "Vlog Edit", image: "https://img.youtube.com/vi/6c5Krkeu1VY/maxresdefault.jpg", videoUrl: "https://www.youtube.com/embed/6c5Krkeu1VY" },
-    { id: 2, title: "Tech Review", image: "https://picsum.photos/seed/yt2/600/400", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-    { id: 3, title: "Tutorial", image: "https://picsum.photos/seed/yt3/600/400", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+    { id: 1, image: "https://img.youtube.com/vi/XGYDfSPHoUM/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/XGYDfSPHoUM" },
+    { id: 2, image: "https://img.youtube.com/vi/c7tAteAE7w4/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/c7tAteAE7w4" },
+    { id: 3, image: "https://img.youtube.com/vi/yxsRzUFAhos/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/yxsRzUFAhos" }
   ],
+
   Shorts: [
-  { id: 1, title: "Vlog Edit", image: "https://img.youtube.com/vi/6c5Krkeu1VY/maxresdefault.jpg", videoUrl: "https://www.youtube.com/embed/6c5Krkeu1VY" },
-    { id: 5, title: "Viral Short 2", image: "https://picsum.photos/seed/short2/300/500", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-    { id: 6, title: "Viral Short 3", image: "https://picsum.photos/seed/short3/300/500", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-      { id: 4, title: "Viral Short 1", image: "https://picsum.photos/seed/short1/300/500", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-    { id: 5, title: "Viral Short 2", image: "https://picsum.photos/seed/short2/300/500", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-    { id: 6, title: "Viral Short 3", image: "https://picsum.photos/seed/short3/300/500", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+    { id: 1, image: "https://img.youtube.com/vi/c6BkhU1KOoU/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/c6BkhU1KOoU" },
+    { id: 2, image: "https://img.youtube.com/vi/xzKMN-yK1qY/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/xzKMN-yK1qY" },
+    { id: 3, image: "https://img.youtube.com/vi/6tBpcSNe9qI/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/6tBpcSNe9qI" },
+    { id: 4, image: "https://img.youtube.com/vi/GHMx5vI96yM/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/GHMx5vI96yM" },
+    { id: 5, image: "https://img.youtube.com/vi/jnmBhGYsiQo/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/jnmBhGYsiQo" },
+    { id: 6, image: "https://img.youtube.com/vi/7xRzsV8hwXE/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/7xRzsV8hwXE" },
+    { id: 7, image: "https://img.youtube.com/vi/ojNGZzwde-M/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/ojNGZzwde-M" },
+    { id: 8, image: "https://img.youtube.com/vi/0klvt_WlOeA/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/0klvt_WlOeA" },
+    { id: 9, image: "https://img.youtube.com/vi/j7scx3Z8GRI/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/j7scx3Z8GRI" }
   ],
-  'Before-After': [
-  { id: 1, title: "Vlog Edit", image: "https://img.youtube.com/vi/6c5Krkeu1VY/maxresdefault.jpg", videoUrl: "https://www.youtube.com/embed/6c5Krkeu1VY" },
-    { id: 8, title: "Pacing Fix", image: "https://picsum.photos/seed/ba2/600/400", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+
+  "Before-After": [
+    { id: 1, image: "https://img.youtube.com/vi/aFT2mXbR47w/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/aFT2mXbR47w" },
+    { id: 2, image: "https://img.youtube.com/vi/hzfrd6v621U/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/hzfrd6v621U" },
+    { id: 3, image: "https://img.youtube.com/vi/j7scx3Z8GRI/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/j7scx3Z8GRI" },
+    { id: 4, image: "https://img.youtube.com/vi/i92xkl1Q9pk/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/i92xkl1Q9pk" },
+    { id: 5, image: "https://img.youtube.com/vi/vUttlWIFuT0/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/vUttlWIFuT0" }
   ]
 };
-
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState<Category>('YouTube');
   const [selectedVideo, setSelectedVideo] = useState<{ url: string; category: Category } | null>(null);
@@ -38,7 +45,7 @@ export default function Portfolio() {
   return (
     <section id="work" className="py-24 bg-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-charcoal text-center mb-16">Selected Works</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-charcoal text-center mb-16">My Works</h2>
 
         {/* Category Buttons */}
         <div className="flex justify-center gap-6 mb-16 flex-wrap">
@@ -92,7 +99,7 @@ export default function Portfolio() {
                     <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mb-4 scale-0 group-hover:scale-100 transition-transform duration-500">
                       <Play size={32} className="text-white fill-current ml-1" />
                     </div>
-                    <span className="text-bg font-bold text-lg">{work.title}</span>
+                    <span className="text-bg font-bold text-lg">{work.title || 'Watch Video'}</span>
                   </div>
                 </div>
               ))}

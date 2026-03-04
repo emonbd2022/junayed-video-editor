@@ -1,10 +1,11 @@
 import { motion } from 'motion/react';
 
 const clients = [
-  "https://picsum.photos/seed/agency1/100/100",
-  "https://picsum.photos/seed/agency2/100/100",
-  "https://picsum.photos/seed/agency3/100/100",
-  "https://picsum.photos/seed/agency4/100/100",
+  "https://res.cloudinary.com/ddmp5ahkc/image/upload/v1772650718/client_4_y8bxhh.jpg",
+  "https://res.cloudinary.com/ddmp5ahkc/image/upload/v1772650719/client_2_rylqyy.jpg",
+  "https://res.cloudinary.com/ddmp5ahkc/image/upload/v1772650718/client_3_fjphzb.jpg",
+  "https://res.cloudinary.com/ddmp5ahkc/image/upload/v1772650719/client_1_ims0ez.jpg",
+  "https://res.cloudinary.com/ddmp5ahkc/image/upload/v1772650718/client_5_thokum.jpg",
 ];
 
 export default function SocialProof() {

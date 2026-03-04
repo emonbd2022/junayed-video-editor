@@ -26,16 +26,16 @@ const works: Record<Category, WorkItem[]> = {
     { id: 5, image: "https://img.youtube.com/vi/jnmBhGYsiQo/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/jnmBhGYsiQo" },
     { id: 6, image: "https://img.youtube.com/vi/7xRzsV8hwXE/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/7xRzsV8hwXE" },
     { id: 7, image: "https://img.youtube.com/vi/ojNGZzwde-M/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/ojNGZzwde-M" },
-    { id: 8, image: "https://img.youtube.com/vi/0klvt_WlOeA/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/0klvt_WlOeA" },
-    { id: 9, image: "https://img.youtube.com/vi/j7scx3Z8GRI/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/j7scx3Z8GRI" }
+    { id: 8, image: "https://img.youtube.com/vi/0klvt_WlOeA/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/0klvt_WlOeA" }
   ],
 
   "Before-After": [
-    { id: 1, image: "https://img.youtube.com/vi/aFT2mXbR47w/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/aFT2mXbR47w" },
+    { id: 1, image: "https://img.youtube.com/vi/vUttlWIFuT0/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/vUttlWIFuT0" },
     { id: 2, image: "https://img.youtube.com/vi/hzfrd6v621U/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/hzfrd6v621U" },
     { id: 3, image: "https://img.youtube.com/vi/j7scx3Z8GRI/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/j7scx3Z8GRI" },
     { id: 4, image: "https://img.youtube.com/vi/i92xkl1Q9pk/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/i92xkl1Q9pk" },
-    { id: 5, image: "https://img.youtube.com/vi/vUttlWIFuT0/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/vUttlWIFuT0" }
+    { id: 5, image: "https://img.youtube.com/vi/aFT2mXbR47w/hqdefault.jpg", videoUrl: "https://www.youtube.com/embed/aFT2mXbR47w" },
+
   ]
 };
 export default function Portfolio() {
@@ -77,7 +77,7 @@ export default function Portfolio() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
               className={`grid gap-10 ${
-                activeCategory === 'Shorts' 
+                activeCategory === 'Shorts' || activeCategory === 'Before-After'
                   ? 'grid-cols-2 md:grid-cols-4' 
                   : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
               }`}
@@ -87,7 +87,7 @@ export default function Portfolio() {
                   key={work.id} 
                   onClick={() => setSelectedVideo({ url: work.videoUrl, category: activeCategory })}
                   className={`group relative overflow-hidden rounded-3xl bg-white border border-charcoal/5 cursor-pointer ${
-                    activeCategory === 'Shorts' ? 'aspect-[9/16]' : 'aspect-video'
+                    activeCategory === 'Shorts' || activeCategory === 'Before-After' ? 'aspect-[9/16]' : 'aspect-video'
                   }`}
                 >
                   <img 
